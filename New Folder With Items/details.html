@@ -1,0 +1,237 @@
+<html>
+<head>
+  <meta name="viewport" content="device-width">
+<title> JAMES + JOYA = 1</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+*{
+  text-decoration: none;
+  font-family: "Spartan", arial;
+}
+    header{ background-image:  ;
+           margin-top: 144px;
+           margin-bottom: 89px;
+           text-align: left;
+           font-size: 55px;
+
+
+    }
+.links{
+  background-color: white;
+  margin: 0;
+  padding:0;
+  border-radius: 21px;
+  text-align: left;
+  transition: 1s ease;
+
+}
+.links:hover{
+  cursor: pointer;
+
+
+}
+.home{
+  border: 3px solid white;
+  border-radius: 8px;
+  transition: 0.5s ease;
+}
+.home:hover{ background:#a1c4fd;}
+.location{
+  border: 3px solid white;
+  border-radius: 8px;
+transition: 0.5s ease;
+}
+.location:hover {background:#a1c4fd;}
+.countdown{border: 3px;
+  border-radius: 8px;
+transition: 0.5s ease;}
+.countdown:hover{background:#a1c4fd;}
+.gifts{
+  border: 3px;
+  border-radius:8px;
+  transition: 0.5s ease;
+}
+.gifts:hover{background:#a1c4fd;}
+.contact{border: 3px solid white;
+border-radius: 8px;
+transition: 0.5s ease;}
+.contact:hover{background:#a1c4fd;}
+
+    section{padding:21px;
+            display: flex;
+
+ .game {margin:0;padding:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}::selection{background:#fb9fe5;text-shadow:none}a{color:#0088CC;text-decoration:none;outline:0}a:hover{color:#005580}a img{border:none}img{max-width:100%}html{font-size:100%}body{padding:5%;font:300 1.25em/1.6 monospace;background:#fff;color:#000;}h1{font-family:"Helvetica Neue",sans-serif;line-height:1;font-weight:300;margin-bottom:1em;}.game{padding:2em;background:#eee;}}
+
+nav ul {
+float: left;
+
+}
+nav ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+}
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 55px 0px 5px 5px;
+}
+nav ul li:hover ul {
+  display: block;}
+
+nav ul li ul li a {
+  padding: 8px 5px;
+}
+nav ul li ul li a:hover{
+  background: solid white;
+}
+    ul {
+
+         list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        display: inline-block;
+        margin: auto;
+        padding: 34px;
+font-family: sans-serif;font-size: 21px;
+    }
+    footer{
+        margin: 0;
+        padding-top: 21px;
+
+        font-style: italic
+    }
+    .introtext{
+      font-size: 18px,
+      font-family:fantasy;
+      padding: 21px;
+      text-align: justify;
+    }
+
+</style>
+</head>
+
+<body>
+    <header>
+        <b>Easter Egg
+           </b>
+        </header>
+
+    <section class="links">
+
+
+       <nav>
+        <ul>
+            <li class="home"><a href="wedding.html">Home</a></li>
+            <li class="location"><a href="details.html">Details</a>
+<ul>
+  <li> <a href="sylt.html">Sylt</a>
+  </li>
+  <li><a href="directions.html">Directions</a> </li>
+  <li> <a href="transportation.html">Transportation</a>
+  </li>
+
+</ul>
+
+            </li>
+            <li class="countdown"><a href="countdown.html">Countdown</a></li>
+            <li class="gifts"><a href="gifts.html">Gifts</a></li>
+            <li class="contact"><a href="contact.html">Contact</a>
+<ul>
+
+
+<li> <a href="RSVP.html">RSVP</a>
+</li>
+</ul>
+            </li>
+        </ul>
+
+
+
+    </nav>
+
+
+    </section>
+
+<section>
+
+
+<div class="game">
+
+    <script>
+        // User choice
+        var userChoice = prompt("Do you choose rock, paper or scissors?");
+
+        if (! userChoice) {
+            // User choice was undefined
+            document.write("<p>Player 1, you cheated! Refresh this screen and fight like a man.</p>");
+        } else {
+            // Display user choice
+            document.write("<p>Player 1:" + " " + userChoice + "</p>");
+        }
+
+        // Computer choice
+        var computerChoice = Math.random();
+        if (computerChoice < 0.34) {
+            computerChoice = "rock";
+        } else if(computerChoice <= 0.67) {
+            computerChoice = "paper";
+        } else {
+            computerChoice = "scissors";
+        }
+
+        // Display computer choice
+        document.write("<p>Computer:" + " " + computerChoice + "</p>");
+
+        // Compare user choice vs computer choice
+        var compare = function(choice1,choice2) {
+            if (choice1 === choice2) {
+                return "It's a tie!";
+            }
+            if (choice1 === "rock") {
+                if (choice2 === "scissors") {
+                    // rock wins
+                    return "You win!";
+                } else {
+                    // paper wins
+                    return "You lose! Try again.";
+                }
+            }
+            if (choice1 === "paper") {
+                if (choice2 === "rock") {
+                    // paper wins
+                    return "You win!";
+                } else {
+                    // scissors wins
+                    return "You lose! Try again.";
+                }
+            }
+            if (choice1 === "scissors") {
+                if (choice2 === "rock") {
+                    // rock wins
+                    return "You lose! Try again.";
+                } else {
+                    // scissors wins
+                    return "You win!";
+                }
+            }
+        };
+
+        // Run the compare function
+        var results = compare(userChoice,computerChoice);
+
+        // Display results
+        document.write("<br><hr><br>" + results);
+    </script>
+
+</div>
+</section>
+
+    <footer>designed by James</footer>
+</body>
+
+</html>
